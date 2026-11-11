@@ -1,4 +1,3 @@
-```dart
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,21 +12,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Muhamad Sheva Ramadhan',
       debugShowCheckedModeBanner: false,
-
       theme: ThemeData(
         colorSchemeSeed: Colors.green,
         brightness: Brightness.light,
         useMaterial3: true,
       ),
-
       darkTheme: ThemeData(
         colorSchemeSeed: Colors.blue,
         brightness: Brightness.dark,
         useMaterial3: true,
       ),
-
       themeMode: ThemeMode.system,
-
       home: const ProfilePage(),
     );
   }
@@ -60,9 +55,7 @@ class ProfilePage extends StatelessWidget {
         onPressed: () {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
-              content: Text(
-                'Terima kasih telah melihat profil saya',
-              ),
+              content: Text('Terima kasih telah melihat profil saya'),
             ),
           );
         },
@@ -88,22 +81,19 @@ class ProfilePage extends StatelessWidget {
 
                 Text(
                   'Muhamad Sheva Ramadhan',
-                  style: Theme.of(context)
-                      .textTheme.headlineSmall,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
 
                 const SizedBox(height: 8),
 
                 Text(
                   'NIM: 112416003',
-                  style: Theme.of(context)
-                      .textTheme.bodyMedium,
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
 
                 Text(
                   'Program Studi: Teknik Informatika',
-                  style: Theme.of(context)
-                      .textTheme.bodyMedium,
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
 
                 const SizedBox(height: 25),
@@ -115,30 +105,25 @@ class ProfilePage extends StatelessWidget {
                       ListTile(
                         title: Text('Informasi Kontak'),
                       ),
-
                       InfoTile(
                         icon: Icons.email,
                         label: 'Email',
                         value: '112416003@global.ac.id',
                       ),
-
                       InfoTile(
                         icon: Icons.phone,
                         label: 'Nomor HP',
                         value: '085694987870',
                       ),
-
                       InfoTile(
                         icon: Icons.school,
                         label: 'Kelas',
                         value: 'Malam',
                       ),
-
                       InfoTile(
                         icon: Icons.code,
                         label: 'GitHub',
-                        value:
-                            'https://github.com/Muhamadshevaramadhan78',
+                        value: 'https://github.com/Muhamadshevaramadhan78',
                       ),
                     ],
                   ),
@@ -153,19 +138,16 @@ class ProfilePage extends StatelessWidget {
                       ListTile(
                         title: Text('Keahlian dan Hobi'),
                       ),
-
                       InfoTile(
                         icon: Icons.computer,
                         label: 'Keahlian',
                         value: 'Programming',
                       ),
-
                       InfoTile(
                         icon: Icons.web,
                         label: 'Bidang',
                         value: 'Web Development',
                       ),
-
                       InfoTile(
                         icon: Icons.sports_esports,
                         label: 'Hobi',

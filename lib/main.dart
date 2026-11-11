@@ -189,3 +189,29 @@ class InfoTile extends StatelessWidget {
     );
   }
 }
+class InfoTile extends StatefulWidget {
+  final IconData icon;
+  final String label;
+  final String value;
+
+  const InfoTile({
+    super.key,
+    required this.icon,
+    required this.label,
+    required this.value,
+  });
+
+  @override
+  State<InfoTile> createState() => _InfoTileState();
+}
+
+class _InfoTileState extends State<InfoTile> {
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Icon(widget.icon),
+      title: Text(widget.label),
+      subtitle: Text(widget.value),
+    );
+  }
+}

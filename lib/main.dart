@@ -72,7 +72,7 @@ class ProfilePage extends StatelessWidget {
                 const SizedBox(height: 16),
 
                 Text(
-                  'Dimas Insya Putra',
+                  'Muhamad Sheva Ramadhan',
                   style: Theme.of(context)
                       .textTheme.headlineSmall,
                 ),
@@ -80,7 +80,7 @@ class ProfilePage extends StatelessWidget {
                 const SizedBox(height: 8),
 
                 Text(
-                  'NIM: 1124160248',
+                  'NIM: 112416003',
                   style: Theme.of(context)
                       .textTheme.bodyMedium,
                 ),
@@ -93,7 +93,7 @@ class ProfilePage extends StatelessWidget {
 
                 const SizedBox(height: 25),
 
-                // CARD INFORMASI KONTAK
+                // Card Informasi Kontak
                 Card(
                   child: Column(
                     children: const [
@@ -104,13 +104,13 @@ class ProfilePage extends StatelessWidget {
                       InfoTile(
                         icon: Icons.email,
                         label: 'Email',
-                        value: '1124160248@global.ac.id',
+                        value: '112416003@global.ac.id'',
                       ),
 
                       InfoTile(
                         icon: Icons.phone,
                         label: 'Nomor HP',
-                        value: '088291282329',
+                        value: '085694987870',
                       ),
 
                       InfoTile(
@@ -122,7 +122,7 @@ class ProfilePage extends StatelessWidget {
                       InfoTile(
                         icon: Icons.code,
                         label: 'GitHub',
-                        value: 'github.com/DimasInsyaP',
+                        value: 'https://github.com/Muhamadshevaramadhan78',
                       ),
                     ],
                   ),
@@ -130,7 +130,7 @@ class ProfilePage extends StatelessWidget {
 
                 const SizedBox(height: 15),
 
-                // CARD KEAHLIAN DAN HOBI
+                // Card Keahlian dan Hobi
                 Card(
                   child: Column(
                     children: const [
@@ -153,7 +153,7 @@ class ProfilePage extends StatelessWidget {
                       InfoTile(
                         icon: Icons.sports_esports,
                         label: 'Hobi',
-                        value: 'Gaming',
+                        value: 'bersepeda',
                       ),
                     ],
                   ),
@@ -167,7 +167,7 @@ class ProfilePage extends StatelessWidget {
   }
 }
 
-// WIDGET INFOTILE
+// Class InfoTile
 class InfoTile extends StatelessWidget {
   final IconData icon;
   final String label;

@@ -55,6 +55,21 @@ class ProfilePage extends StatelessWidget {
         ],
       ),
 
+      // FLOATING ACTION BUTTON
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text(
+                'Terima kasih telah melihat profil saya',
+              ),
+            ),
+          );
+        },
+        child: const Icon(Icons.favorite),
+      ),
+
+      // BODY
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -93,7 +108,7 @@ class ProfilePage extends StatelessWidget {
 
                 const SizedBox(height: 25),
 
-                // Card Informasi Kontak
+                // CARD INFORMASI KONTAK
                 Card(
                   child: Column(
                     children: const [
@@ -104,7 +119,7 @@ class ProfilePage extends StatelessWidget {
                       InfoTile(
                         icon: Icons.email,
                         label: 'Email',
-                        value: '112416003@global.ac.id'',
+                        value: '112416003@global.ac.id',
                       ),
 
                       InfoTile(
@@ -122,7 +137,8 @@ class ProfilePage extends StatelessWidget {
                       InfoTile(
                         icon: Icons.code,
                         label: 'GitHub',
-                        value: 'https://github.com/Muhamadshevaramadhan78',
+                        value:
+                            'https://github.com/Muhamadshevaramadhan78',
                       ),
                     ],
                   ),
@@ -130,7 +146,7 @@ class ProfilePage extends StatelessWidget {
 
                 const SizedBox(height: 15),
 
-                // Card Keahlian dan Hobi
+                // CARD KEAHLIAN DAN HOBI
                 Card(
                   child: Column(
                     children: const [
@@ -153,7 +169,7 @@ class ProfilePage extends StatelessWidget {
                       InfoTile(
                         icon: Icons.sports_esports,
                         label: 'Hobi',
-                        value: 'bersepeda',
+                        value: 'Bersepeda',
                       ),
                     ],
                   ),
@@ -167,7 +183,7 @@ class ProfilePage extends StatelessWidget {
   }
 }
 
-// Class InfoTile
+// CLASS INFOTILE
 class InfoTile extends StatelessWidget {
   final IconData icon;
   final String label;
@@ -186,32 +202,6 @@ class InfoTile extends StatelessWidget {
       leading: Icon(icon),
       title: Text(label),
       subtitle: Text(value),
-    );
-  }
-}
-class InfoTile extends StatefulWidget {
-  final IconData icon;
-  final String label;
-  final String value;
-
-  const InfoTile({
-    super.key,
-    required this.icon,
-    required this.label,
-    required this.value,
-  });
-
-  @override
-  State<InfoTile> createState() => _InfoTileState();
-}
-
-class _InfoTileState extends State<InfoTile> {
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: Icon(widget.icon),
-      title: Text(widget.label),
-      subtitle: Text(widget.value),
     );
   }
 }

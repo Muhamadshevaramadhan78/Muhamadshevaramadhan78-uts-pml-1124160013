@@ -1,3 +1,4 @@
+```dart
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
@@ -90,11 +92,100 @@ class ProfilePage extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 25),
+
+                // CARD INFORMASI KONTAK
+                Card(
+                  child: Column(
+                    children: const [
+                      ListTile(
+                        title: Text('Informasi Kontak'),
+                      ),
+
+                      InfoTile(
+                        icon: Icons.email,
+                        label: 'Email',
+                        value: '1124160248@global.ac.id',
+                      ),
+
+                      InfoTile(
+                        icon: Icons.phone,
+                        label: 'Nomor HP',
+                        value: '088291282329',
+                      ),
+
+                      InfoTile(
+                        icon: Icons.school,
+                        label: 'Kelas',
+                        value: 'Malam',
+                      ),
+
+                      InfoTile(
+                        icon: Icons.code,
+                        label: 'GitHub',
+                        value: 'github.com/DimasInsyaP',
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 15),
+
+                // CARD KEAHLIAN DAN HOBI
+                Card(
+                  child: Column(
+                    children: const [
+                      ListTile(
+                        title: Text('Keahlian dan Hobi'),
+                      ),
+
+                      InfoTile(
+                        icon: Icons.computer,
+                        label: 'Keahlian',
+                        value: 'Programming',
+                      ),
+
+                      InfoTile(
+                        icon: Icons.web,
+                        label: 'Bidang',
+                        value: 'Web Development',
+                      ),
+
+                      InfoTile(
+                        icon: Icons.sports_esports,
+                        label: 'Hobi',
+                        value: 'Gaming',
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
         ),
       ),
+    );
+  }
+}
+
+// WIDGET INFOTILE
+class InfoTile extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final String value;
+
+  const InfoTile({
+    super.key,
+    required this.icon,
+    required this.label,
+    required this.value,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Icon(icon),
+      title: Text(label),
+      subtitle: Text(value),
     );
   }
 }
